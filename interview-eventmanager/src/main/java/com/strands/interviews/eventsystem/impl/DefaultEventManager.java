@@ -27,7 +27,12 @@ public class DefaultEventManager implements EventManager
             return;
         }
 
-        sendEventTo(event, calculateListeners(event.getClass()));
+        // Task 3
+        if ((listenersByClass.get(event.getClass()) == null) && (listenersByClass.get(event.getClass().getSuperclass()) != null)) {
+            sendEventTo(event, calculateListeners(event.getClass().getSuperclass()));
+        } else {
+            sendEventTo(event, calculateListeners(event.getClass()));
+        }
     }
 
     private Collection calculateListeners(Class eventClass)

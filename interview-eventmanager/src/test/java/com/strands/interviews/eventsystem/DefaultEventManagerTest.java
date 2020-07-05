@@ -139,12 +139,24 @@ public class DefaultEventManagerTest
         eventManager.registerListener("sub.events", eventListenerMockSubEvents);
         eventManager.registerListener("object.events", eventListenerAllEvents);
 
-        // Publishing SubEvent and veryfying special listener was called
+        // Publishing SubEvent and verifying special listener was called
         eventManager.publishEvent(new SubEvent(this));
         assertTrue(eventListenerAllEvents.isCalled());
 
-        // Publishing Simple and veryfying special listener was also called
+        // Publishing Simple and verifying special listener was also called
         eventManager.publishEvent(new SimpleEvent(this));
         assertTrue(eventListenerAllEvents.isCalled());
+    }
+
+    @Test
+    public void testTask3() {
+        // Creating event listener for parent class
+        EventListenerMock eventListenerMockSimpleEvents = new EventListenerMock(new Class[]{SimpleEvent.class});
+        // Registering listeners for parent class
+        eventManager.registerListener("simple.events", eventListenerMockSimpleEvents);
+        // Publishing event of child class, SubEvent
+        eventManager.publishEvent(new SubEvent(this));
+        // Verifying that listener for parent class is called
+        assertTrue(eventListenerMockSimpleEvents.isCalled());
     }
 }
