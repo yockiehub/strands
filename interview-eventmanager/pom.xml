@@ -6,6 +6,10 @@
     <name>Strands Events Coding Test</name>
     <version>1.0-SNAPSHOT</version>
     <description>The event system coding test</description>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>log4j</groupId>

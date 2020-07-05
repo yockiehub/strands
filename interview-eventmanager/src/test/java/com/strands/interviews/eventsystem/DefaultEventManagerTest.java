@@ -109,4 +109,19 @@ public class DefaultEventManagerTest
         {
         }
     }
+
+    @Test
+    public void testTask1() {
+        // Creating event listener for classes parent and child
+        EventListenerMock eventListenerMockSimpleEvents = new EventListenerMock(new Class[]{SimpleEvent.class});
+        EventListenerMock eventListenerMockSubEvents = new EventListenerMock(new Class[]{SubEvent.class});
+        // Registering listeners for both classes
+        eventManager.registerListener("simple.events", eventListenerMockSimpleEvents);
+        eventManager.registerListener("sub.events", eventListenerMockSubEvents);
+        // Publishing event of child class, SubEvent
+        eventManager.publishEvent(new SubEvent(this));
+        // Verifying that only the listener for SubEvents is called
+        assertFalse(eventListenerMockSimpleEvents.isCalled());
+        assertTrue(eventListenerMockSubEvents.isCalled());
+    }
 }
