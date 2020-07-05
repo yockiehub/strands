@@ -48,6 +48,21 @@ public class DefaultEventManager implements EventManager
 
         Class[] classes = listener.getHandledEventClasses();
 
+        // TASK 2
+
+        if (classes.length == 0) {
+            // Get all classes in all listeners
+            HashSet<Class> classHashSet = new HashSet<>();
+            // Get all classes per listener and store in a set to prevent duplicates and reduce iterations
+            // when calling addToListenerList
+            for (Object lis: listeners.values()) {
+                for (Class c: ((InterviewEventListener)lis).getHandledEventClasses()) {
+                    classHashSet.add(c);
+                }
+            }
+            classes = classHashSet.toArray(new Class[0]);
+        }
+
         for (int i = 0; i < classes.length; i++)
             addToListenerList(classes[i], listener);
 

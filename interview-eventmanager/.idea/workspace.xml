@@ -31,7 +31,22 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.DefaultEventManagerTest">
+    <configuration name="DefaultEventManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eventsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.strands.interviews.eventsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.strands.interviews.eventsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.strands.interviews.eventsystem.DefaultEventManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DefaultEventManagerTest.testTask1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="eventsystem" />
       <extension name="coverage">
@@ -48,8 +63,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DefaultEventManagerTest.testTask2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="eventsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.strands.interviews.eventsystem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.strands.interviews.eventsystem" />
+      <option name="MAIN_CLASS_NAME" value="com.strands.interviews.eventsystem.DefaultEventManagerTest" />
+      <option name="METHOD_NAME" value="testTask2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DefaultEventManagerTest" />
+        <item itemvalue="JUnit.DefaultEventManagerTest.testTask2" />
         <item itemvalue="JUnit.DefaultEventManagerTest.testTask1" />
       </list>
     </recent_temporary>
@@ -80,22 +113,22 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1750" height="276" key="GridCell.Tab.0.bottom" timestamp="1593950838537">
+    <state width="1750" height="276" key="GridCell.Tab.0.bottom" timestamp="1593951205234">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="276" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593950838537" />
-    <state width="1750" height="276" key="GridCell.Tab.0.center" timestamp="1593950838536">
+    <state width="1750" height="276" key="GridCell.Tab.0.bottom/0.23.1792.1017@0.23.1792.1017" timestamp="1593951205234" />
+    <state width="1750" height="276" key="GridCell.Tab.0.center" timestamp="1593951205234">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="276" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593950838536" />
-    <state width="1750" height="276" key="GridCell.Tab.0.left" timestamp="1593950838535">
+    <state width="1750" height="276" key="GridCell.Tab.0.center/0.23.1792.1017@0.23.1792.1017" timestamp="1593951205234" />
+    <state width="1750" height="276" key="GridCell.Tab.0.left" timestamp="1593951205233">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="276" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593950838535" />
-    <state width="1750" height="276" key="GridCell.Tab.0.right" timestamp="1593950838536">
+    <state width="1750" height="276" key="GridCell.Tab.0.left/0.23.1792.1017@0.23.1792.1017" timestamp="1593951205233" />
+    <state width="1750" height="276" key="GridCell.Tab.0.right" timestamp="1593951205234">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>
-    <state width="1750" height="276" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593950838536" />
+    <state width="1750" height="276" key="GridCell.Tab.0.right/0.23.1792.1017@0.23.1792.1017" timestamp="1593951205234" />
     <state x="384" y="113" key="SettingsEditor" timestamp="1593950722265">
       <screen x="0" y="23" width="1792" height="1017" />
     </state>

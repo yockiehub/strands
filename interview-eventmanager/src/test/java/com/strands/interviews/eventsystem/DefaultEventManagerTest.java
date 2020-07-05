@@ -124,4 +124,27 @@ public class DefaultEventManagerTest
         assertFalse(eventListenerMockSimpleEvents.isCalled());
         assertTrue(eventListenerMockSubEvents.isCalled());
     }
+
+    @Test
+    public void testTask2() {
+        // Creating event listener for different classes
+        EventListenerMock eventListenerMockSimpleEvents = new EventListenerMock(new Class[]{SimpleEvent.class});
+        EventListenerMock eventListenerMockSubEvents = new EventListenerMock(new Class[]{SubEvent.class});
+
+        // Creating special event listener
+        EventListenerMock eventListenerAllEvents = new EventListenerMock(new Class[]{});
+
+        // Registering listeners
+        eventManager.registerListener("simple.events", eventListenerMockSimpleEvents);
+        eventManager.registerListener("sub.events", eventListenerMockSubEvents);
+        eventManager.registerListener("object.events", eventListenerAllEvents);
+
+        // Publishing SubEvent and veryfying special listener was called
+        eventManager.publishEvent(new SubEvent(this));
+        assertTrue(eventListenerAllEvents.isCalled());
+
+        // Publishing Simple and veryfying special listener was also called
+        eventManager.publishEvent(new SimpleEvent(this));
+        assertTrue(eventListenerAllEvents.isCalled());
+    }
 }
